@@ -6,22 +6,22 @@ function App() {
     {
       id: 1,
       name: "主站",
-      url: ""
+      url: "https://www.books.com.tw/"
     },
     {
       id: 2,
       name: "Portal",
-      url: ""
+      url: "https://portal.bpm.books.com.tw:8443/"
     },
     {
       id: 3,
       name: "Intranet(新)",
-      url: ""
+      url: "https://intranet.books.com.tw/exep/intranet/main/index_main.php"
     },
     {
       id: 4,
       name: "Intranet(舊)",
-      url: ""
+      url: "https://intranet5.books.com.tw/siteindex/loadMain"
     },
     {
       id: 5,
