@@ -1,6 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Books Extensions",
+  "name": "Work easily in one click",
+  "action": {
+    "default_title": "Books Extensions",
+    "default_popup": "index.html"
+  },
   "icons": [
     {
       "src": "favicon.ico",
