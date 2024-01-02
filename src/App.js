@@ -45,7 +45,7 @@ function App() {
       <div className="btn-list">
         {btnList.length > 0 && btnList.map((item) => {
           return (
-            <button onClick={() => openTabs(item.url)}>{item.name}</button>
+            <button onClick={() => openTabs(item.url)} className='btn'>{item.name}</button>
           )
         })}
       </div>
