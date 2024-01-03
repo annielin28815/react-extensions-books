@@ -3,14 +3,123 @@
 }
 .btn-list {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .btn-list .btn {
-  border: none;
-  border-radius: 20px;
-  padding: 8px 24px;
+  font-family: monospace, sans-serif;
   font-size: 14px;
+  width: 140px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  border: none;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  background-color: #FFF;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.btn-list .btn:hover {
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+.btn-list .btn .deco {
+  border-radius: 0.25rem;
+  background-color: #8fc31e;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transform: translate(-100%, 100%) rotate(-40deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  width: 12rem;
+  height: 12rem;
+  margin-left: 2.25rem;
+  margin-bottom: 2.25rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.btn-list .btn:hover .deco {
+  transform: translate(0px, 100%) rotate(-40deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  margin-left: 0;
+  margin-bottom: 8rem;
+}
+.btn-list .btn .text {
+  position: relative;
+  width: 100%;
+  color: #444444;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-list .btn:hover .text {
+  color: #FFFFFF;
+}
+.mail-btn-list {
+  margin: 24px 0px 8px 0px;
+}
+.mail-link {
+  margin-left: 12px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px #1c95d6 solid;
+  padding: 0.55rem 0.8rem;
+  color: #155e84;
+  box-shadow: 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.mail-link .deco {
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: translate(-100%, 100%) rotate(-40deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  justify-content: center;
+  align-items: center;
+  background-color: #56b9ee;
+  color: #FFFFFF;
+  transition-duration: 0.3s;
+}
+.mail-link .deco .deco-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.mail-link:hover .deco {
+  background-color: #56b9ee;
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+}
+.mail-link .text {
+  font-size: 18px;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  justify-content: center;
+  align-items: center;
+  color: #56b9ee;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+}
+.mail-link:hover .text {
+  transform: translate(100%, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+}
+.mail-link .invisible {
+  position: relative;
+  visibility: hidden;
 }
