@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const year = document.querySelector(".year");
+  const [thisYear, setThisYear] = useState(new Date().getFullYear());
+
   const [btnList, setBtnList] = useState([
     {
       id: 1,
@@ -16,28 +19,38 @@ function App() {
     {
       id: 3,
       name: "Intranet(新)",
-      url: "https://intranet.books.com.tw/exep/intranet/main/index_main.php"
+      url: "https://intranet5.books.com.tw/siteindex/loadMain"
     },
     {
       id: 4,
       name: "Intranet(舊)",
-      url: "https://intranet5.books.com.tw/siteindex/loadMain"
+      url: "https://intranet.books.com.tw/exep/intranet/main/index_main.php"
     },
     {
       id: 5,
-      name: "供應鏈(新)",
-      url: ""
+      name: "Demo 清單",
+      url: "https://demo.books.com.tw/"
     },
     {
       id: 6,
-      name: "供應鏈(舊)",
-      url: ""
+      name: "EDM test",
+      url: "http://10.38.25.168/mail/"
     },
+    {
+      id: 7,
+      name: "Mobile Debug",
+      url: "chrome://inspect/#devices"
+    },
+    {
+      id: 8,
+      name: "APP 例行測試",
+      url: "https://docs.google.com/spreadsheets/d/10F2OLI22J49pH4u4vOYvkRe-2ci24LcIImXnC51O_7E/edit#gid=0"
+    }
   ]);
 
   const openTabs = (url) => {
     window.open(url, "_blank");
-  }
+  };
 
   return (
     <div className="app">
@@ -65,6 +78,8 @@ function App() {
           <span className="invisible" title="open mail server">go</span>
         </a>
       </div>
+
+      <p>&copy;{thisYear} All Rights Reserved.</p>
     </div>
   );
 }
